@@ -31,15 +31,33 @@ function onImgError(e: Event) {
   if (fallback) fallback.style.display = 'flex'
 }
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
 async function downloadCard() {
   if (!cardRef.value || downloading.value) return
   downloading.value = true
   try {
-    const dataUrl = await toPng(cardRef.value, { pixelRatio: 2, cacheBust: true })
-    const link = document.createElement('a')
-    link.download = `灵魂精灵-${main.value?.name ?? 'result'}.png`
-    link.href = dataUrl
-    link.click()
+    const opts = { pixelRatio: 2, cacheBust: true }
+    await toPng(cardRef.value, opts)
+    const dataUrl = await toPng(cardRef.value, opts)
+
+    if (isMobile) {
+      if (navigator.share) {
+        const res  = await fetch(dataUrl)
+        const blob = await res.blob()
+        const file = new File([blob], `灵魂精灵-${main.value?.name ?? 'result'}.png`, { type: 'image/png' })
+        if (navigator.canShare?.({ files: [file] })) {
+          await navigator.share({ files: [file], title: `我的灵魂精灵是${main.value?.name}` })
+          return
+        }
+      }
+      window.open(dataUrl, '_blank')
+    } else {
+      const link = document.createElement('a')
+      link.download = `灵魂精灵-${main.value?.name ?? 'result'}.png`
+      link.href = dataUrl
+      link.click()
+    }
   } catch (err) {
     console.error(err)
   } finally {
@@ -132,7 +150,7 @@ function restart() {
       <!-- ── Actions ────────────────────────────────────────────── -->
       <div class="actions">
         <button class="btn-warm btn-save" @click="downloadCard" :disabled="downloading">
-          {{ downloading ? '生成中…' : '↓ 保存卡片' }}
+          {{ downloading ? '生成中…' : (isMobile ? '分享 / 保存卡片' : '↓ 保存卡片') }}
         </button>
         <button class="btn-white" @click="restart">重新测试</button>
       </div>
