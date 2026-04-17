@@ -15,7 +15,7 @@
       "glow":      "rgba(232,76,48,0.2)",
       "text":      "#1a0a06"
     },
-    "sprite": "/spirits/huohua.png"
+    "sprite": "/rock/spirits/huohua.png"
   },
   {
     "id": "shuilanlan",
@@ -33,7 +33,7 @@
       "glow":      "rgba(74,158,255,0.2)",
       "text":      "#061828"
     },
-    "sprite": "/spirits/shuilanlan.png"
+    "sprite": "/rock/spirits/shuilanlan.png"
   },
   {
     "id": "miaomiao",
@@ -51,7 +51,7 @@
       "glow":      "rgba(77,184,126,0.2)",
       "text":      "#081a10"
     },
-    "sprite": "/spirits/miaomiao.png"
+    "sprite": "/rock/spirits/miaomiao.png"
   },
   {
     "id": "timo",
@@ -69,7 +69,7 @@
       "glow":      "rgba(240,184,32,0.2)",
       "text":      "#1a1400"
     },
-    "sprite": "/spirits/timo.png"
+    "sprite": "/rock/spirits/timo.png"
   },
   {
     "id": "xueyingwawa",
@@ -87,7 +87,7 @@
       "glow":      "rgba(126,200,227,0.2)",
       "text":      "#061418"
     },
-    "sprite": "/spirits/xueyingwawa.png"
+    "sprite": "/rock/spirits/xueyingwawa.png"
   },
   {
     "id": "kesuiwang",
@@ -105,7 +105,7 @@
       "glow":      "rgba(160,128,96,0.2)",
       "text":      "#1a1208"
     },
-    "sprite": "/spirits/kesuiwang.png"
+    "sprite": "/rock/spirits/kesuiwang.png"
   },
   {
     "id": "luoyin",
@@ -123,7 +123,7 @@
       "glow":      "rgba(139,105,20,0.2)",
       "text":      "#140e00"
     },
-    "sprite": "/spirits/luoyin.png"
+    "sprite": "/rock/spirits/luoyin.png"
   },
   {
     "id": "emolang",
@@ -141,7 +141,7 @@
       "glow":      "rgba(142,68,173,0.2)",
       "text":      "#120818"
     },
-    "sprite": "/spirits/emolang.png"
+    "sprite": "/rock/spirits/emolang.png"
   },
   {
     "id": "yajiji",
@@ -159,7 +159,7 @@
       "glow":      "rgba(232,160,32,0.2)",
       "text":      "#1a1000"
     },
-    "sprite": "/spirits/yajiji.png"
+    "sprite": "/rock/spirits/yajiji.png"
   },
   {
     "id": "yinsugou",
@@ -177,7 +177,7 @@
       "glow":      "rgba(192,48,32,0.2)",
       "text":      "#180604"
     },
-    "sprite": "/spirits/yinsugou.png"
+    "sprite": "/rock/spirits/yinsugou.png"
   },
   {
     "id": "dujiaoshou",
@@ -195,7 +195,7 @@
       "glow":      "rgba(155,112,216,0.2)",
       "text":      "#0e0818"
     },
-    "sprite": "/spirits/dujiaoshou.png"
+    "sprite": "/rock/spirits/dujiaoshou.png"
   },
   {
     "id": "xingguangshi",
@@ -213,7 +213,7 @@
       "glow":      "rgba(200,168,0,0.2)",
       "text":      "#181200"
     },
-    "sprite": "/spirits/xingguangshi.png"
+    "sprite": "/rock/spirits/xingguangshi.png"
   },
   {
     "id": "liaoyazhu",
@@ -231,7 +231,7 @@
       "glow":      "rgba(74,138,158,0.2)",
       "text":      "#061218"
     },
-    "sprite": "/spirits/liaoyazhu.png"
+    "sprite": "/rock/spirits/liaoyazhu.png"
   },
   {
     "id": "yiwangbaobao",
@@ -249,7 +249,7 @@
       "glow":      "rgba(176,144,224,0.2)",
       "text":      "#0c0818"
     },
-    "sprite": "/spirits/yiwangbaobao.png"
+    "sprite": "/rock/spirits/yiwangbaobao.png"
   },
   {
     "id": "keliji",
@@ -267,7 +267,7 @@
       "glow":      "rgba(212,58,26,0.2)",
       "text":      "#180602"
     },
-    "sprite": "/spirits/keliji.png"
+    "sprite": "/rock/spirits/keliji.png"
   },
   {
     "id": "kakaniao",
@@ -285,7 +285,7 @@
       "glow":      "rgba(66,168,224,0.2)",
       "text":      "#041420"
     },
-    "sprite": "/spirits/kakaniao.png"
+    "sprite": "/rock/spirits/kakaniao.png"
   },
   {
     "id": "paersasi",
@@ -303,7 +303,7 @@
       "glow":      "rgba(158,32,96,0.2)",
       "text":      "#180610"
     },
-    "sprite": "/spirits/paersasi.png"
+    "sprite": "/rock/spirits/paersasi.png"
   },
   {
     "id": "emoding",
@@ -321,7 +321,7 @@
       "glow":      "rgba(42,110,106,0.2)",
       "text":      "#041210"
     },
-    "sprite": "/spirits/emoding.png"
+    "sprite": "/rock/spirits/emoding.png"
   },
   {
     "id": "kula",
@@ -339,7 +339,7 @@
       "glow":      "rgba(48,96,200,0.2)",
       "text":      "#040a1e"
     },
-    "sprite": "/spirits/kula.png"
+    "sprite": "/rock/spirits/kula.png"
   },
   {
     "id": "abu",
@@ -358,7 +358,7 @@
       "glow":      "rgba(160,112,184,0.2)",
       "text":      "#100818"
     },
-    "sprite": "/spirits/abu.png"
+    "sprite": "/rock/spirits/abu.png"
   },
   {
     "id": "enzo",
@@ -377,6 +377,6 @@
       "glow":      "rgba(44,62,110,0.25)",
       "text":      "#040610"
     },
-    "sprite": "/spirits/enzo.png"
+    "sprite": "/rock/spirits/enzo.png"
   }
 ]
