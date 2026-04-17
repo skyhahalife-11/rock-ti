@@ -1,0 +1,717 @@
+[
+  {
+    "id": "q1",
+    "title": "轻风山上，格里芬院长说今天要选你的第一只精灵伙伴。面前站着三只，草丛里还躲着一只偷看你——你走向谁？",
+    "options": [
+      {
+        "id": "q1a",
+        "text": "那只一刻不停乱蹦、已经在挑衅另外两只的火系精灵",
+        "weights": {
+          "huohua": 3,
+          "yinsugou": 2,
+          "emolang": 2,
+          "xingguangshi": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q1b",
+        "text": "安静坐在角落、一直用眼神打量你的水系精灵",
+        "weights": {
+          "shuilanlan": 3,
+          "luoyin": 2,
+          "dujiaoshou": 2,
+          "kula": 1
+        }
+      },
+      {
+        "id": "q1c",
+        "text": "第一个跑过来、往你腿上蹭个不停的草系精灵",
+        "weights": {
+          "miaomiao": 3,
+          "kakaniao": 2,
+          "timo": 2,
+          "yajiji": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q1d",
+        "text": "悄悄走到草丛边，把那只躲着的也引了出来",
+        "weights": {
+          "xueyingwawa": 3,
+          "paersasi": 2,
+          "emoding": 2,
+          "miaomiao": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q2",
+    "title": "天梯赛明天开战，昨晚你是怎么备战的？",
+    "options": [
+      {
+        "id": "q2a",
+        "text": "刷了二十场练习赛，手感对了才去睡觉",
+        "weights": {
+          "yinsugou": 3,
+          "huohua": 2,
+          "liaoyazhu": 2,
+          "keliji": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q2b",
+        "text": "复盘了对手上赛季所有录像，制定了完整的克制策略",
+        "weights": {
+          "luoyin": 3,
+          "shuilanlan": 2,
+          "xingguangshi": 2,
+          "kula": 1
+        }
+      },
+      {
+        "id": "q2c",
+        "text": "拉着菲尔特去食堂吃了顿好的，明天的事明天再说",
+        "weights": {
+          "kesuiwang": 3,
+          "miaomiao": 2,
+          "kakaniao": 2,
+          "shuilanlan": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q2d",
+        "text": "重新研究了所有精灵，临时换了套从没用过的全新阵容",
+        "weights": {
+          "yajiji": 3,
+          "abu": 2,
+          "emolang": 2,
+          "kula": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q3",
+    "title": "放学路上你独自撞见了恩佐。他沉默地看着你，低声说：「你的眼睛，让我想起了一个人。」然后转身消失在黑暗里。你——",
+    "options": [
+      {
+        "id": "q3a",
+        "text": "立刻追上去，把他堵在墙角问清楚",
+        "weights": {
+          "emolang": 3,
+          "timo": 2,
+          "huohua": 2,
+          "xingguangshi": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q3b",
+        "text": "站在原地，把这句话翻来覆去想了很久",
+        "weights": {
+          "paersasi": 3,
+          "dujiaoshou": 2,
+          "xueyingwawa": 2,
+          "shuilanlan": 1
+        }
+      },
+      {
+        "id": "q3c",
+        "text": "悄悄跟上去，看看他到底去了哪里",
+        "weights": {
+          "kula": 3,
+          "emolang": 2,
+          "luoyin": 2,
+          "dujiaoshou": 1
+        }
+      },
+      {
+        "id": "q3d",
+        "text": "回宿舍把这件事写进日记，感觉他身上有什么秘密",
+        "weights": {
+          "paersasi": 3,
+          "xueyingwawa": 2,
+          "dujiaoshou": 2,
+          "emoding": 1
+        },
+        "easterTag": "dengdengya"
+      }
+    ]
+  },
+  {
+    "id": "q4",
+    "title": "菲尔特慌张跑来找你——他的精灵在练习赛中受伤了，他不知道怎么办。而你今天已经精疲力竭……",
+    "options": [
+      {
+        "id": "q4a",
+        "text": "二话不说，拉着他就往护士萌萌那边走",
+        "weights": {
+          "timo": 3,
+          "kakaniao": 2,
+          "xueyingwawa": 2,
+          "yiwangbaobao": 1
+        }
+      },
+      {
+        "id": "q4b",
+        "text": "先冷静问他情况，帮他一步步分析该怎么处理",
+        "weights": {
+          "xingguangshi": 3,
+          "luoyin": 2,
+          "shuilanlan": 2,
+          "keliji": 1
+        }
+      },
+      {
+        "id": "q4c",
+        "text": "借了他一瓶药膏，告诉他用法，然后自己去休息了",
+        "weights": {
+          "kula": 3,
+          "emolang": 2,
+          "luoyin": 2,
+          "kesuiwang": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q4d",
+        "text": "陪他去了，全程心不在焉，但一直没有离开",
+        "weights": {
+          "emoding": 3,
+          "paersasi": 2,
+          "miaomiao": 2,
+          "abu": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q5",
+    "title": "可丽希亚公主当着全班的面宣布，你明天必须陪她去海螺沙滩捕粉色精灵——「这不是邀请，是命令。」偏偏你明天有天梯赛……",
+    "options": [
+      {
+        "id": "q5a",
+        "text": "当场拒绝，解释你有赛事，公主也不例外",
+        "weights": {
+          "keliji": 3,
+          "emolang": 2,
+          "huohua": 2,
+          "luoyin": 1
+        }
+      },
+      {
+        "id": "q5b",
+        "text": "答应了，但悄悄把自己的赛程想办法换到今晚",
+        "weights": {
+          "yinsugou": 3,
+          "shuilanlan": 2,
+          "xingguangshi": 2,
+          "kula": 1
+        }
+      },
+      {
+        "id": "q5c",
+        "text": "去了，陪公主玩得很开心，比赛下次再打",
+        "weights": {
+          "miaomiao": 3,
+          "kakaniao": 2,
+          "shuilanlan": 2,
+          "kesuiwang": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q5d",
+        "text": "提议把捕捉地点改到一处精灵更多、离赛场也不远的地方，一举两得",
+        "weights": {
+          "yajiji": 3,
+          "shuilanlan": 2,
+          "liaoyazhu": 2,
+          "xingguangshi": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q6",
+    "title": "在森林探索时，你发现一只从未见过的精灵躲在树洞里，显然受了伤，正警惕地盯着你——图鉴上没有任何记录。",
+    "options": [
+      {
+        "id": "q6a",
+        "text": "直接蹲下来，慢慢把手伸过去",
+        "weights": {
+          "xueyingwawa": 3,
+          "timo": 2,
+          "yiwangbaobao": 2,
+          "miaomiao": 1
+        }
+      },
+      {
+        "id": "q6b",
+        "text": "在原地观察很久，先判断它的属性和习性再靠近",
+        "weights": {
+          "shuilanlan": 3,
+          "luoyin": 2,
+          "dujiaoshou": 2,
+          "kesuiwang": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q6c",
+        "text": "翻开图鉴到空白页，边靠近边记录它的特征",
+        "weights": {
+          "liaoyazhu": 3,
+          "dujiaoshou": 2,
+          "xingguangshi": 2,
+          "abu": 1
+        }
+      },
+      {
+        "id": "q6d",
+        "text": "掏出急救包，不管三七二十一先给它包扎",
+        "weights": {
+          "yiwangbaobao": 3,
+          "huohua": 2,
+          "timo": 2,
+          "keliji": 1
+        },
+        "easterTag": "jijiiya"
+      }
+    ]
+  },
+  {
+    "id": "q7",
+    "title": "精灵对战课临时宣布今天考试。你的精灵刚刚在上一场对战中输了，明显还没恢复状态……",
+    "options": [
+      {
+        "id": "q7a",
+        "text": "上！输了是输了，但不战而退不是我的风格",
+        "weights": {
+          "huohua": 3,
+          "timo": 2,
+          "xingguangshi": 2,
+          "emolang": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q7b",
+        "text": "申请换一只状态更好的精灵出场，稳妥优先",
+        "weights": {
+          "keliji": 3,
+          "shuilanlan": 2,
+          "xingguangshi": 2,
+          "luoyin": 1
+        }
+      },
+      {
+        "id": "q7c",
+        "text": "用战术弥补状态，打一场漂亮的防守反击",
+        "weights": {
+          "luoyin": 3,
+          "yinsugou": 2,
+          "kula": 2,
+          "liaoyazhu": 1
+        }
+      },
+      {
+        "id": "q7d",
+        "text": "赛前给精灵喂了块零食，打了个手势：我们一起，上吧",
+        "weights": {
+          "kakaniao": 3,
+          "miaomiao": 2,
+          "paersasi": 2,
+          "emoding": 1
+        },
+        "easterTag": "dengdengya"
+      }
+    ]
+  },
+  {
+    "id": "q8",
+    "title": "李尔不小心闯进禁区触发了机关，把图书馆三楼整个锁上了，里面还有几个同学。你刚好路过——",
+    "options": [
+      {
+        "id": "q8a",
+        "text": "第一个冲进去找触发源，边找边喊「跟我来！」",
+        "weights": {
+          "huohua": 3,
+          "timo": 2,
+          "yinsugou": 1,
+          "xingguangshi": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q8b",
+        "text": "找来学院地图，分析所有出口，制定最优解锁方案",
+        "weights": {
+          "keliji": 3,
+          "luoyin": 2,
+          "shuilanlan": 2,
+          "liaoyazhu": 1
+        }
+      },
+      {
+        "id": "q8c",
+        "text": "先确认里面所有人都安全，再慢慢想解决办法",
+        "weights": {
+          "yiwangbaobao": 3,
+          "xueyingwawa": 2,
+          "paersasi": 2,
+          "emoding": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q8d",
+        "text": "观察了一下机关的规律，用了个出乎意料的方法破解了",
+        "weights": {
+          "kula": 3,
+          "yajiji": 2,
+          "emolang": 2,
+          "abu": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q9",
+    "title": "你在枕头下发现了一张手绘地图，标着一处「精灵禁地」。地图上只有一行字：今晚去，必有收获。",
+    "options": [
+      {
+        "id": "q9a",
+        "text": "当晚就出发了，越神秘越好奇",
+        "weights": {
+          "kula": 3,
+          "huohua": 2,
+          "emolang": 2,
+          "dujiaoshou": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q9b",
+        "text": "先叫上菲尔特一起去，这种事一个人太危险",
+        "weights": {
+          "timo": 3,
+          "kakaniao": 2,
+          "paersasi": 2,
+          "yiwangbaobao": 1
+        }
+      },
+      {
+        "id": "q9c",
+        "text": "研究地图的笔迹和纸张，试图判断送图的人是谁",
+        "weights": {
+          "shuilanlan": 3,
+          "luoyin": 2,
+          "dujiaoshou": 2,
+          "xingguangshi": 1
+        }
+      },
+      {
+        "id": "q9d",
+        "text": "把地图压回枕头底下，明天白天再说",
+        "weights": {
+          "kesuiwang": 3,
+          "miaomiao": 2,
+          "shuilanlan": 2,
+          "xueyingwawa": 1
+        },
+        "easterTag": "dengdengya"
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "title": "格里芬院长终于批准你学习御风术。你第一次踩着扫把飞上学院上方的云层，第一反应是——",
+    "options": [
+      {
+        "id": "q10a",
+        "text": "全速冲刺，看自己能飞多高多远",
+        "weights": {
+          "huohua": 3,
+          "yinsugou": 2,
+          "emolang": 2,
+          "kula": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q10b",
+        "text": "悬停在高空，把整个王国的全貌看了个遍",
+        "weights": {
+          "dujiaoshou": 3,
+          "kula": 2,
+          "shuilanlan": 2,
+          "luoyin": 1
+        }
+      },
+      {
+        "id": "q10c",
+        "text": "立刻飞回去叫上菲尔特和可丽希亚，这种体验要一起分享",
+        "weights": {
+          "kakaniao": 3,
+          "timo": 2,
+          "yajiji": 2,
+          "paersasi": 1
+        }
+      },
+      {
+        "id": "q10d",
+        "text": "慢慢飘在云层里，感觉什么都不用想了",
+        "weights": {
+          "kesuiwang": 3,
+          "shuilanlan": 2,
+          "xueyingwawa": 2,
+          "miaomiao": 2
+        },
+        "easterTag": "dengdengya"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "title": "天梯赛决赛前，队友跑来说他的精灵今天不在状态，可能会连累大家。你怎么说？",
+    "options": [
+      {
+        "id": "q11a",
+        "text": "「没关系，我来扛，你把能做到的做到就行。」",
+        "weights": {
+          "xingguangshi": 3,
+          "timo": 2,
+          "yiwangbaobao": 2,
+          "paersasi": 1
+        }
+      },
+      {
+        "id": "q11b",
+        "text": "帮他快速分析精灵状态，重新制定适合现状的战术",
+        "weights": {
+          "xingguangshi": 3,
+          "luoyin": 2,
+          "yinsugou": 2,
+          "keliji": 1
+        }
+      },
+      {
+        "id": "q11c",
+        "text": "「我们练了这么久了，上去打就对了。」 拍拍他肩膀",
+        "weights": {
+          "emolang": 3,
+          "liaoyazhu": 2,
+          "keliji": 2,
+          "luoyin": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q11d",
+        "text": "建议让状态更好的备用精灵上阵，实用主义优先",
+        "weights": {
+          "yinsugou": 3,
+          "kula": 2,
+          "xingguangshi": 2,
+          "luoyin": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "title": "在森林深处独自探索时，恩佐那只著名的暗系精灵突然出现在你面前。它没有攻击你，只是静静盯着你看。",
+    "options": [
+      {
+        "id": "q12a",
+        "text": "摆好对战姿势，随时准备应战",
+        "weights": {
+          "yinsugou": 3,
+          "emolang": 2,
+          "huohua": 1,
+          "xingguangshi": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q12b",
+        "text": "不动声色地慢慢后退，保持安全距离",
+        "weights": {
+          "shuilanlan": 3,
+          "luoyin": 2,
+          "keliji": 2,
+          "miaomiao": 1
+        }
+      },
+      {
+        "id": "q12c",
+        "text": "慢慢靠近，想看看它到底在等什么",
+        "weights": {
+          "emoding": 3,
+          "xueyingwawa": 2,
+          "dujiaoshou": 2,
+          "paersasi": 1
+        }
+      },
+      {
+        "id": "q12d",
+        "text": "翻开魔法图鉴，开始记录它的特征——这机会太难得了",
+        "weights": {
+          "liaoyazhu": 3,
+          "dujiaoshou": 2,
+          "shuilanlan": 1,
+          "miaomiao": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "title": "深夜十一点，学院里安静了。你一个人待在练习室里，其实在做什么？",
+    "options": [
+      {
+        "id": "q13a",
+        "text": "还在对着靶子死磕那个最难的组合招式，不练会就不睡",
+        "weights": {
+          "liaoyazhu": 3,
+          "huohua": 2,
+          "yinsugou": 2,
+          "keliji": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q13b",
+        "text": "把今天所有对战复盘了一遍，找到了三个之前没注意到的漏洞",
+        "weights": {
+          "liaoyazhu": 3,
+          "luoyin": 1,
+          "shuilanlan": 2,
+          "xingguangshi": 2
+        }
+      },
+      {
+        "id": "q13c",
+        "text": "坐在地板上，让精灵依偎着自己，发了很久的呆",
+        "weights": {
+          "xueyingwawa": 3,
+          "kesuiwang": 2,
+          "miaomiao": 2,
+          "paersasi": 2
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q13d",
+        "text": "在尝试一个根本不在教材里的魔法组合，也许行，也许不行，试试看",
+        "weights": {
+          "emolang": 3,
+          "yajiji": 2,
+          "kula": 2,
+          "dujiaoshou": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "title": "格里芬院长宣布今年的「梦想宣言日」——全院学生在广场上公开说出自己最大的梦想。轮到你了——",
+    "options": [
+      {
+        "id": "q14a",
+        "text": "大声说：「我要成为洛克王国最强的训练师！」",
+        "weights": {
+          "timo": 3,
+          "xingguangshi": 2,
+          "yinsugou": 2,
+          "huohua": 1
+        }
+      },
+      {
+        "id": "q14b",
+        "text": "「我想认识这个世界上所有的精灵，每一只。」",
+        "weights": {
+          "dujiaoshou": 3,
+          "liaoyazhu": 2,
+          "xueyingwawa": 2,
+          "shuilanlan": 1
+        }
+      },
+      {
+        "id": "q14c",
+        "text": "说了句出乎意料的话，全场愣了两秒，然后都笑了",
+        "weights": {
+          "yajiji": 3,
+          "kakaniao": 2,
+          "abu": 2,
+          "emolang": 1
+        }
+      },
+      {
+        "id": "q14d",
+        "text": "说了一句很短、很真诚的话，说完就走下台了",
+        "weights": {
+          "emoding": 3,
+          "paersasi": 2,
+          "luoyin": 2,
+          "shuilanlan": 1
+        },
+        "easterTag": "dengdengya"
+      }
+    ]
+  },
+  {
+    "id": "q15",
+    "title": "这段洛克王国的旅程里，你最在意的是什么？",
+    "options": [
+      {
+        "id": "q15a",
+        "text": "那些最险的战斗——打赢了的，和差点没打赢的",
+        "weights": {
+          "emolang": 3,
+          "huohua": 2,
+          "yinsugou": 2,
+          "xingguangshi": 1
+        },
+        "easterTag": "jijiiya"
+      },
+      {
+        "id": "q15b",
+        "text": "每次理清复杂局面、想出绝妙策略的那种瞬间",
+        "weights": {
+          "luoyin": 3,
+          "shuilanlan": 2,
+          "kula": 2,
+          "yinsugou": 1
+        }
+      },
+      {
+        "id": "q15c",
+        "text": "一起吃饭、一起发呆、一起笑的那些普通时光",
+        "weights": {
+          "miaomiao": 3,
+          "kakaniao": 2,
+          "paersasi": 2,
+          "xueyingwawa": 1
+        },
+        "easterTag": "dengdengya"
+      },
+      {
+        "id": "q15d",
+        "text": "那些还没去过的地方，还没见过的精灵",
+        "weights": {
+          "dujiaoshou": 3,
+          "kula": 2,
+          "shuilanlan": 2,
+          "xueyingwawa": 1
+        }
+      }
+    ]
+  }
+]

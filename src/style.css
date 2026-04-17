@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #app { margin: 0; padding: 0; min-height: 100dvh; }
+
+html {
+  background: #fafaf8;
+  color: #000000;
+  font-family: 'Noto Sans SC', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── DESIGN.md tokens (ElevenLabs / Apple) ───────────────────── */
+:root {
+  --bg:          #ffffff;
+  --bg-alt:      #f5f5f5;
+  --warm-stone:  rgba(245, 242, 239, 0.85);
+  --warm-shadow: rgba(78, 50, 23, 0.04);
+  --text:        #000000;
+  --text-2:      #4e4e4e;
+  --text-3:      #777169;
+  --border:      #e5e5e5;
+  --border-sub:  rgba(0,0,0,0.05);
+
+  /* Spirit accent — used sparingly as color notes */
+  --accent:      #00a882;
+  --accent-warm: #d4a055;
+}
+
+/* ── DESIGN.md shadow system (sub-0.1 opacity, multi-layer) ──── */
+.shadow-inset  { box-shadow: rgba(0,0,0,0.075) 0px 0px 0px 0.5px inset, #fff 0px 0px 0px 0px inset; }
+.shadow-ring   { box-shadow: rgba(0,0,0,0.06) 0px 0px 0px 1px, rgba(0,0,0,0.04) 0px 1px 2px, rgba(0,0,0,0.04) 0px 2px 4px; }
+.shadow-card   { box-shadow: rgba(0,0,0,0.4) 0px 0px 1px, rgba(0,0,0,0.04) 0px 4px 4px; }
+.shadow-warm   { box-shadow: rgba(78,50,23,0.04) 0px 6px 16px; }
+
+/* ── Components ──────────────────────────────────────────────── */
+@layer components {
+
+  /* Primary black pill */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 18px;
+    height: 40px;
+    border-radius: 9999px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    background: #000000;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn-primary:hover  { opacity: 0.82; }
+  .btn-primary:active { transform: scale(0.98); }
+
+  /* Warm stone pill — DESIGN.md signature CTA */
+  .btn-warm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px 12px 16px;
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    background: var(--warm-stone);
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(78,50,23,0.04) 0px 6px 16px;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn-warm:hover  { opacity: 0.85; }
+  .btn-warm:active { transform: scale(0.98); }
+
+  /* White pill (shadow-bordered) */
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+    height: 36px;
+    border-radius: 9999px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.4) 0px 0px 1px, rgba(0,0,0,0.04) 0px 4px 4px;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+  }
+  .btn-white:hover { opacity: 0.75; }
+
+  /* Card — DESIGN.md card style */
+  .card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow:
+      rgba(0,0,0,0.075) 0px 0px 0px 0.5px inset,
+      rgba(0,0,0,0.06) 0px 0px 0px 1px,
+      rgba(0,0,0,0.04) 0px 4px 8px,
+      rgba(0,0,0,0.03) 0px 16px 32px;
+  }
+
+  /* Display — Waldenburg equivalent, Cormorant 300 */
+  .display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ── Keyframes ───────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%       { transform: scale(1.04); opacity: 1; }
+}
+
+/* ── Page transitions ────────────────────────────────────────── */
+.page-enter-active { transition: opacity 0.35s ease, transform 0.35s ease; }
+.page-leave-active { transition: opacity 0.2s ease; }
+.page-enter-from   { opacity: 0; transform: translateY(12px); }
+.page-leave-to     { opacity: 0; }
