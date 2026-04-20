@@ -6,7 +6,7 @@ import LoadingPage from '../pages/LoadingPage.vue'
 import ResultPage  from '../pages/ResultPage.vue'
 
 const router = createRouter({
-  history: createWebHistory('/rock/'),
+  history: createWebHistory('/'),
   routes: [
     { path: '/',        name: 'home',    component: HomePage    },
     { path: '/intro',   name: 'intro',   component: IntroPage   },
