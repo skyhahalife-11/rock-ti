@@ -22,31 +22,34 @@ export function calcResult(selectedOptions: QuizOption[]): QuizResult {
   }
 
   // jijiiya >= 6 → enzo，dengdengya >= 6 → abu；两者同时满足时 jijiiya 优先
-  const votes = tallyVotes(selectedOptions)
+  const primaryVotes   = tallyVotes(selectedOptions)
+  const secondaryVotes = tallySecondary(selectedOptions)
 
   if (jijiiyaCount >= JIJIIYA_THRESHOLD || dengdengCount >= DENGDENG_THRESHOLD) {
     const eggId     = jijiiyaCount >= JIJIIYA_THRESHOLD ? 'enzo' : 'abu'
     const eggSpirit = spirits.find(s => s.id === eggId)!
-    const subSpirit = pickTop(votes, spirits.filter(s => !s.isHidden), 1, [])[0]
+    const subSpirit = pickTop(secondaryVotes, spirits.filter(s => !s.isHidden), 1, [])[0]
 
     return {
       mainSpirit: eggSpirit,
       subSpirit,
-      scores: votes,
+      scores: primaryVotes,
       isEasterEgg: true,
       timestamp: Date.now(),
     }
   }
 
   // ── Vote-based scoring ────────────────────────────────────────────────────
-  // weight=3 得 2 票（决定主灵魂），weight=2 得 1 票（决定副灵魂及平局）
+  // 主精灵：weight=3 主力票最多的精灵（各精灵出场概率趋于均等）
+  // 副精灵：weight=2 次要票最多的精灵（排除主精灵后）
   const visibleSpirits = spirits.filter(s => !s.isHidden)
-  const [main, sub]    = pickTop(votes, visibleSpirits, 2, [])
+  const main           = pickTop(primaryVotes, visibleSpirits, 1, [])[0]
+  const sub            = pickTop(secondaryVotes, visibleSpirits, 1, [main.id])[0]
 
   return {
     mainSpirit: main,
     subSpirit:  sub,
-    scores: votes,
+    scores: primaryVotes,
     isEasterEgg: false,
     timestamp: Date.now(),
   }
@@ -55,17 +58,27 @@ export function calcResult(selectedOptions: QuizOption[]): QuizResult {
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
 /**
- * 投票制计票：
- *   weight=3（主力精灵）→ 2 票
- *   weight=2（次要精灵）→ 1 票
- *   weight=1 不计票
+ * 主精灵投票：只计 weight=3 的主力票（每题 1 票）
+ * 保证 19 只可见精灵出场概率接近均等（各有 3~4 道主力题）
  */
 function tallyVotes(selected: QuizOption[]): Record<string, number> {
   const votes: Record<string, number> = {}
   for (const opt of selected) {
     for (const [id, weight] of Object.entries(opt.weights)) {
-      if (weight === 3)      votes[id] = (votes[id] ?? 0) + 2
-      else if (weight === 2) votes[id] = (votes[id] ?? 0) + 1
+      if (weight === 3) votes[id] = (votes[id] ?? 0) + 1
+    }
+  }
+  return votes
+}
+
+/**
+ * 副精灵投票：只计 weight=2 的次要票，用于选出副灵魂精灵
+ */
+function tallySecondary(selected: QuizOption[]): Record<string, number> {
+  const votes: Record<string, number> = {}
+  for (const opt of selected) {
+    for (const [id, weight] of Object.entries(opt.weights)) {
+      if (weight === 2) votes[id] = (votes[id] ?? 0) + 1
     }
   }
   return votes
