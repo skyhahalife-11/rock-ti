@@ -13,6 +13,7 @@ const visible    = ref(false)
 const cardRef    = ref<HTMLElement | null>(null)
 const downloading = ref(false)
 const fontWarmed  = ref(false)
+const previewUrl  = ref('')
 
 onMounted(() => {
   const r = storage.loadResult()
@@ -74,16 +75,9 @@ async function downloadCard() {
     if (spiritImg && originalSrc) spiritImg.src = originalSrc
 
     if (isMobile) {
-      if (navigator.share) {
-        const res  = await fetch(dataUrl)
-        const blob = await res.blob()
-        const file = new File([blob], `灵魂精灵-${main.value?.name ?? 'result'}.png`, { type: 'image/png' })
-        if (navigator.canShare?.({ files: [file] })) {
-          await navigator.share({ files: [file], title: `我的灵魂精灵是${main.value?.name}` })
-          return
-        }
-      }
-      window.open(dataUrl, '_blank')
+      // 手机端：展示全屏预览浮层，用户长按图片保存（iOS/Android 全平台通吃）
+      previewUrl.value = dataUrl
+      return
     } else {
       const link = document.createElement('a')
       link.download = `灵魂精灵-${main.value?.name ?? 'result'}.png`
@@ -194,6 +188,17 @@ function restart() {
 
     </div>
   </div>
+
+      <!-- ── 手机长按保存浮层 ────────────────────────────────────────────── -->
+      <Teleport to="body">
+        <div v-if="previewUrl" class="preview-mask" @click.self="previewUrl = ''">
+          <div class="preview-box">
+            <p class="preview-hint">长按图片保存到相册</p>
+            <img :src="previewUrl" class="preview-img" alt="结果卡片" />
+            <button class="preview-close" @click="previewUrl = ''">关闭</button>
+          </div>
+        </div>
+      </Teleport>
 </template>
 
 <style scoped>
@@ -475,4 +480,59 @@ function restart() {
   letter-spacing: 0.02em;
   margin: 0;
 }
+
+/* ── 手机长按保存浮层 ──────────────────────────────────────────────────── */
+.preview-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.preview-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.preview-hint {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.06em;
+  margin: 0;
+  text-align: center;
+}
+
+.preview-img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.preview-close {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 8px 28px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.preview-close:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+
 </style>
