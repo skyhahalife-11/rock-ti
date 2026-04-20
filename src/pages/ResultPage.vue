@@ -103,9 +103,6 @@ function restart() {
       <!-- ── Result Card ────────────────────────────────────────── -->
       <div ref="cardRef" class="result-card card">
 
-        <!-- Accent bar -->
-        <div class="accent-bar" :style="{ background: main?.theme.primary }" />
-
         <!-- Spirit image -->
         <div class="spirit-visual">
           <img
@@ -280,13 +277,6 @@ function restart() {
   display: flex;
   flex-direction: column;
   gap: 0;
-}
-
-/* Thin color bar at top — spirit accent, only color element */
-.accent-bar {
-  height: 3px;
-  width: 100%;
-  flex-shrink: 0;
 }
 
 /* ── Spirit image ────────────────────────────────────────────── */
