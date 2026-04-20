@@ -134,10 +134,10 @@
         "id": "q3d",
         "text": "回宿舍把这件事写进日记，感觉他身上有什么秘密",
         "weights": {
-          "paersasi": 3,
-          "xueyingwawa": 2,
-          "dujiaoshou": 2,
-          "emoding": 1
+          "yiwangbaobao": 3,
+          "paersasi": 2,
+          "xueyingwawa": 1,
+          "dujiaoshou": 1
         },
         "easterTag": "dengdengya"
       }
@@ -208,10 +208,10 @@
         "id": "q5b",
         "text": "答应了，但悄悄把自己的赛程想办法换到今晚",
         "weights": {
-          "yinsugou": 3,
-          "shuilanlan": 2,
-          "xingguangshi": 2,
-          "kula": 1
+          "paersasi": 3,
+          "yinsugou": 2,
+          "shuilanlan": 1,
+          "xingguangshi": 1
         }
       },
       {
@@ -485,10 +485,10 @@
         "id": "q11a",
         "text": "「没关系，我来扛，你把能做到的做到就行。」",
         "weights": {
-          "xingguangshi": 3,
+          "kakaniao": 3,
           "timo": 2,
           "yiwangbaobao": 2,
-          "paersasi": 1
+          "xingguangshi": 1
         }
       },
       {
@@ -505,7 +505,7 @@
         "id": "q11c",
         "text": "「我们练了这么久了，上去打就对了。」 拍拍他肩膀",
         "weights": {
-          "emolang": 3,
+          "paersasi": 3,
           "liaoyazhu": 2,
           "keliji": 2,
           "luoyin": 1
@@ -590,10 +590,10 @@
         "id": "q13b",
         "text": "把今天所有对战复盘了一遍，找到了三个之前没注意到的漏洞",
         "weights": {
-          "liaoyazhu": 3,
-          "luoyin": 1,
+          "xingguangshi": 3,
           "shuilanlan": 2,
-          "xingguangshi": 2
+          "luoyin": 1,
+          "liaoyazhu": 2
         }
       },
       {

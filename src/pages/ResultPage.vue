@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+﻿<script setup lang="ts">
+import { ref, computed, onMounted, nextTick } from 'vue'
 import { useRouter }                from 'vue-router'
 import { toPng }                    from 'html-to-image'
 import { useStorage }               from '@/composables/useStorage'
@@ -12,12 +12,19 @@ const result     = ref<QuizResult | null>(null)
 const visible    = ref(false)
 const cardRef    = ref<HTMLElement | null>(null)
 const downloading = ref(false)
+const fontWarmed  = ref(false)
 
 onMounted(() => {
   const r = storage.loadResult()
   if (!r) { router.replace('/'); return }
   result.value = r
-  setTimeout(() => { visible.value = true }, 80)
+  setTimeout(async () => {
+    visible.value = true
+    await nextTick()
+    if (cardRef.value) {
+      toPng(cardRef.value, { pixelRatio: 1 }).then(() => { fontWarmed.value = true }).catch(() => {})
+    }
+  }, 80)
 })
 
 const main       = computed(() => result.value?.mainSpirit)
@@ -58,10 +65,12 @@ async function downloadCard() {
       } catch { /* 预加载失败时沿用原路径 */ }
     }
 
-    const opts = { pixelRatio: 2 }
-    // 第一次调用让库加载字体等资源，第二次拿到正确截图
-    await toPng(cardRef.value, opts)
-    const dataUrl = await toPng(cardRef.value, opts)
+    const pixelRatio = isMobile ? 1.5 : 2
+    // pre-warm done in onMounted; fall back to extra call if user taps immediately
+    if (!fontWarmed.value) {
+      await toPng(cardRef.value, { pixelRatio })
+    }
+    const dataUrl = await toPng(cardRef.value, { pixelRatio })
 
     // 还原图片 src
     if (spiritImg && originalSrc) spiritImg.src = originalSrc
