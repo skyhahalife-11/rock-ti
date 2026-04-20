@@ -5,8 +5,11 @@ import spiritsRaw           from '@/data/spirits.json'
 
 const spirits = spiritsRaw as unknown as Spirit[]
 
-// 彩蛋触发阈值：需要选出 6 次同标签选项才触发隐藏精灵
-const EASTER_THRESHOLD = 6
+// 彩蛋触发阈值（分开设置，因为两类标签选项数量不同）
+// jijiiya 共 11 个选项，需选中 8 个（73%）才触发恩佐
+// dengdengya 共 14 个选项，需选中 10 个（71%）才触发阿布
+const JIJIIYA_THRESHOLD  = 8
+const DENGDENG_THRESHOLD = 10
 
 export function calcResult(selectedOptions: QuizOption[]): QuizResult {
   // ── Easter egg detection ─────────────────────────────────────────────────
@@ -21,8 +24,8 @@ export function calcResult(selectedOptions: QuizOption[]): QuizResult {
   // jijiiya >= 6 → enzo，dengdengya >= 6 → abu；两者同时满足时 jijiiya 优先
   const votes = tallyVotes(selectedOptions)
 
-  if (jijiiyaCount >= EASTER_THRESHOLD || dengdengCount >= EASTER_THRESHOLD) {
-    const eggId     = jijiiyaCount >= EASTER_THRESHOLD ? 'enzo' : 'abu'
+  if (jijiiyaCount >= JIJIIYA_THRESHOLD || dengdengCount >= DENGDENG_THRESHOLD) {
+    const eggId     = jijiiyaCount >= JIJIIYA_THRESHOLD ? 'enzo' : 'abu'
     const eggSpirit = spirits.find(s => s.id === eggId)!
     const subSpirit = pickTop(votes, spirits.filter(s => !s.isHidden), 1, [])[0]
 
