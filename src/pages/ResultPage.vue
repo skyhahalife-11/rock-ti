@@ -33,13 +33,38 @@ function onImgError(e: Event) {
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
+function blobToDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload  = () => resolve(reader.result as string)
+    reader.onerror = reject
+    reader.readAsDataURL(blob)
+  })
+}
+
 async function downloadCard() {
   if (!cardRef.value || downloading.value) return
   downloading.value = true
   try {
-    const opts = { pixelRatio: 2, cacheBust: true }
+    // 预先把精灵图转成 base64，避免手机端截图时图片来不及加载
+    const spiritImg = cardRef.value.querySelector('.spirit-img') as HTMLImageElement | null
+    let originalSrc = ''
+    if (spiritImg?.src) {
+      originalSrc = spiritImg.src
+      try {
+        const resp = await fetch(spiritImg.src)
+        const blob = await resp.blob()
+        spiritImg.src = await blobToDataUrl(blob)
+      } catch { /* 预加载失败时沿用原路径 */ }
+    }
+
+    const opts = { pixelRatio: 2 }
+    // 第一次调用让库加载字体等资源，第二次拿到正确截图
     await toPng(cardRef.value, opts)
     const dataUrl = await toPng(cardRef.value, opts)
+
+    // 还原图片 src
+    if (spiritImg && originalSrc) spiritImg.src = originalSrc
 
     if (isMobile) {
       if (navigator.share) {

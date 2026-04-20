@@ -16,11 +16,12 @@ function startQuiz() {
   router.push('/intro')
 }
 
+const base = import.meta.env.BASE_URL
 const spirits = [
-  { name: '提莫',    element: '光系', img: '/spirits/timo.png',       color: '#f0b820', delay: '0.15s' },
-  { name: '水蓝蓝',  element: '水系', img: '/spirits/shuilanlan.png', color: '#4a9eff', delay: '0.3s'  },
-  { name: '独角兽',  element: '翼系', img: '/spirits/dujiaoshou.png', color: '#9b70d8', delay: '0.45s' },
-  { name: '帕尔萨斯', element: '恶魔系', img: '/spirits/paersasi.png', color: '#9e2060', delay: '0s'  },
+  { name: '提莫',    element: '光系', img: `${base}spirits/timo.png`,       color: '#f0b820', delay: '0.15s' },
+  { name: '水蓝蓝',  element: '水系', img: `${base}spirits/shuilanlan.png`, color: '#4a9eff', delay: '0.3s'  },
+  { name: '独角兽',  element: '翼系', img: `${base}spirits/dujiaoshou.png`, color: '#9b70d8', delay: '0.45s' },
+  { name: '帕尔萨斯', element: '恶魔系', img: `${base}spirits/paersasi.png`, color: '#9e2060', delay: '0s'  },
 ]
 
 </script>
@@ -63,7 +64,7 @@ const spirits = [
         <div class="halo h2" />
         <div class="halo h3" />
         <!-- Core sphere -->
-        <img src="/prism-ball.png" class="sphere" alt="棱镜球" />
+        <img :src="`${base}prism-ball.png`" class="sphere" alt="棱镜球" />
         <!-- Orbit ring -->
         <div class="orbit" />
       </div>
