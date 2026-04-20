@@ -66,10 +66,8 @@ async function downloadCard() {
     }
 
     const pixelRatio = isMobile ? 1.5 : 2
-    // pre-warm done in onMounted; fall back to extra call if user taps immediately
-    if (!fontWarmed.value) {
-      await toPng(cardRef.value, { pixelRatio })
-    }
+    // 第一次调用让库加载字体等资源，第二次拿到正确截图
+    await toPng(cardRef.value, { pixelRatio })
     const dataUrl = await toPng(cardRef.value, { pixelRatio })
 
     // 还原图片 src
