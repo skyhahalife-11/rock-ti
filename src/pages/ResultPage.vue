@@ -41,43 +41,26 @@ function onImgError(e: Event) {
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
-function blobToDataUrl(blob: Blob): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    reader.onload  = () => resolve(reader.result as string)
-    reader.onerror = reject
-    reader.readAsDataURL(blob)
-  })
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((_, reject) =>
+      setTimeout(() => reject(new Error('timeout')), ms)
+    )
+  ])
 }
 
 async function downloadCard() {
   if (!cardRef.value || downloading.value) return
   downloading.value = true
   try {
-    // 预先把精灵图转成 base64，避免手机端截图时图片来不及加载
-    const spiritImg = cardRef.value.querySelector('.spirit-img') as HTMLImageElement | null
-    let originalSrc = ''
-    if (spiritImg?.src) {
-      originalSrc = spiritImg.src
-      try {
-        const resp = await fetch(spiritImg.src)
-        const blob = await resp.blob()
-        spiritImg.src = await blobToDataUrl(blob)
-      } catch { /* 预加载失败时沿用原路径 */ }
-    }
-
-    const pixelRatio = isMobile ? 1.5 : 2
-    // 第一次调用让库加载字体等资源，第二次拿到正确截图
-    await toPng(cardRef.value, { pixelRatio })
-    const dataUrl = await toPng(cardRef.value, { pixelRatio })
-
-    // 还原图片 src
-    if (spiritImg && originalSrc) spiritImg.src = originalSrc
+    const opts = { pixelRatio: isMobile ? 1.5 : 2 }
+    // 第一次让库加载字体等资源，第二次拿到正确截图，各限 15s
+    await withTimeout(toPng(cardRef.value, opts), 15000)
+    const dataUrl = await withTimeout(toPng(cardRef.value, opts), 15000)
 
     if (isMobile) {
-      // 手机端：展示全屏预览浮层，用户长按图片保存（iOS/Android 全平台通吃）
       previewUrl.value = dataUrl
-      return
     } else {
       const link = document.createElement('a')
       link.download = `灵魂精灵-${main.value?.name ?? 'result'}.png`
@@ -85,7 +68,8 @@ async function downloadCard() {
       link.click()
     }
   } catch (err) {
-    console.error(err)
+    console.error('card gen error:', err)
+    alert('生成失败，请截图保存 :)')
   } finally {
     downloading.value = false
   }
