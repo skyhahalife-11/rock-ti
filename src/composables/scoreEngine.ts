@@ -40,10 +40,12 @@ export function calcResult(selectedOptions: QuizOption[]): QuizResult {
   }
 
   // ── Vote-based scoring ────────────────────────────────────────────────────
-  // 主精灵：weight=3 主力票最多的精灵（各精灵出场概率趋于均等）
-  // 副精灵：weight=2 次要票最多的精灵（排除主精灵后）
+  // 主精灵：主力票最多；平局时在并列第一名中随机选，保证出场概率均等
+  // 副精灵：次要票最多（排除主精灵后）
   const visibleSpirits = spirits.filter(s => !s.isHidden)
-  const main           = pickTop(primaryVotes, visibleSpirits, 1, [])[0]
+  const topScore       = Math.max(...visibleSpirits.map(s => primaryVotes[s.id] ?? 0))
+  const tied           = visibleSpirits.filter(s => (primaryVotes[s.id] ?? 0) === topScore)
+  const main           = tied[Math.floor(Math.random() * tied.length)]
   const sub            = pickTop(secondaryVotes, visibleSpirits, 1, [main.id])[0]
 
   return {
