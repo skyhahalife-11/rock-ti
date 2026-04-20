@@ -4,379 +4,463 @@
     "name": "火花",
     "element": "火系",
     "archetype": "热血冲锋者",
-    "tags": ["冲劲十足", "爆发力强", "先锋型"],
+    "tags": [
+      "冲劲十足",
+      "爆发力强",
+      "先锋型"
+    ],
     "description": "你和火花一样，天生就是冲在最前面的那种人。遇到障碍不会绕路，只会加速冲破。情绪来得快、燃得旺，哪怕有时莽撞，也总能靠一股劲儿把局面点燃。你让身边的人看到「还能这么干」的可能性。",
     "shareText": "我的灵魂精灵是火花——热血冲锋、先人一步。遇到困难，我的第一反应永远是冲过去。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#e84c30",
+      "primary": "#e84c30",
       "secondary": "#ff8c5a",
-      "bg":        "#fff8f5",
-      "glow":      "rgba(232,76,48,0.2)",
-      "text":      "#1a0a06"
+      "bg": "#fff8f5",
+      "glow": "rgba(232,76,48,0.2)",
+      "text": "#1a0a06"
     },
-    "sprite": "/rock/spirits/huohua.png"
+    "sprite": "/spirits/huohua.png"
   },
   {
     "id": "shuilanlan",
     "name": "水蓝蓝",
     "element": "水系",
     "archetype": "悠然旁观者",
-    "tags": ["温和", "慵懒", "持久型"],
+    "tags": [
+      "温和",
+      "慵懒",
+      "持久型"
+    ],
     "description": "你与水蓝蓝共享同一种处世哲学——慢下来，才能看清楚。不急着出手，不争着出头，但真正需要你的时候，你的判断总是最稳的那一个。你的存在本身就是一种让人安心的力量。",
     "shareText": "我的灵魂精灵是水蓝蓝——温柔慵懒、静水流深。不争不抢，但一直都在。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#4a9eff",
+      "primary": "#4a9eff",
       "secondary": "#82c4ff",
-      "bg":        "#f5faff",
-      "glow":      "rgba(74,158,255,0.2)",
-      "text":      "#061828"
+      "bg": "#f5faff",
+      "glow": "rgba(74,158,255,0.2)",
+      "text": "#061828"
     },
-    "sprite": "/rock/spirits/shuilanlan.png"
+    "sprite": "/spirits/shuilanlan.png"
   },
   {
     "id": "miaomiao",
     "name": "喵喵",
     "element": "草系",
     "archetype": "佛系随缘派",
-    "tags": ["随和", "温顺", "与世无争"],
+    "tags": [
+      "随和",
+      "温顺",
+      "与世无争"
+    ],
     "description": "你和喵喵一样，不强求结果，不执着输赢，但内心有一处柔软的地方保护得很好。你对人温顺，对事随缘，却往往在别人最不经意的时候带来意想不到的温暖。",
     "shareText": "我的灵魂精灵是喵喵——佛系温顺、随缘而行。不争不急，反而最接近快乐的核心。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#4db87e",
+      "primary": "#4db87e",
       "secondary": "#80d4a4",
-      "bg":        "#f5fbf7",
-      "glow":      "rgba(77,184,126,0.2)",
-      "text":      "#081a10"
+      "bg": "#f5fbf7",
+      "glow": "rgba(77,184,126,0.2)",
+      "text": "#081a10"
     },
-    "sprite": "/rock/spirits/miaomiao.png"
+    "sprite": "/spirits/miaomiao.png"
   },
   {
     "id": "timo",
     "name": "提莫",
     "element": "光系",
     "archetype": "热血追梦人",
-    "tags": ["勇敢", "积极", "充满梦想"],
+    "tags": [
+      "勇敢",
+      "积极",
+      "充满梦想"
+    ],
     "description": "你与提莫一样，相信只要朝着光走，终会抵达。你不是最强的那一个，但你绝对是最不会放弃的那一个。你的笑容和热情总能感染身边的人，让大家跟着你相信——「我们能行」。",
     "shareText": "我的灵魂精灵是提莫——勇敢追梦、永不放弃。不是最强，但从不停步。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#f0b820",
+      "primary": "#f0b820",
       "secondary": "#ffd060",
-      "bg":        "#fffdf0",
-      "glow":      "rgba(240,184,32,0.2)",
-      "text":      "#1a1400"
+      "bg": "#fffdf0",
+      "glow": "rgba(240,184,32,0.2)",
+      "text": "#1a1400"
     },
-    "sprite": "/rock/spirits/timo.png"
+    "sprite": "/spirits/timo.png"
   },
   {
     "id": "xueyingwawa",
     "name": "雪影娃娃",
     "element": "冰系",
     "archetype": "治愈守护者",
-    "tags": ["善良", "飘逸", "治愈系"],
+    "tags": [
+      "善良",
+      "飘逸",
+      "治愈系"
+    ],
     "description": "你有雪影娃娃特有的温柔——不张扬，但刚好能在别人最需要的时候出现。你的善意不是表演给人看的，而是深入骨髓的本能。你治愈的不只是伤口，是人心里说不清楚的那种疲倦。",
     "shareText": "我的灵魂精灵是雪影娃娃——善良飘逸、无声治愈。静静地，让人感到安全。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#7ec8e3",
+      "primary": "#7ec8e3",
       "secondary": "#aadff0",
-      "bg":        "#f5fcff",
-      "glow":      "rgba(126,200,227,0.2)",
-      "text":      "#061418"
+      "bg": "#f5fcff",
+      "glow": "rgba(126,200,227,0.2)",
+      "text": "#061418"
     },
-    "sprite": "/rock/spirits/xueyingwawa.png"
+    "sprite": "/spirits/xueyingwawa.png"
   },
   {
     "id": "kesuiwang",
     "name": "瞌睡王",
     "element": "普通系",
     "archetype": "大器晚成者",
-    "tags": ["懒散", "憨厚", "潜力型"],
+    "tags": [
+      "懒散",
+      "憨厚",
+      "潜力型"
+    ],
     "description": "你和瞌睡王一样，不争朝夕，但从未停止生长。别人觉得你慢，你知道自己只是在蓄力。你的憨厚里藏着大智若愚，你的懒散背后是对「值不值得」的精准判断。",
     "shareText": "我的灵魂精灵是瞌睡王——懒散憨厚、大器晚成。不着急，厚积薄发才是正道。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#a08060",
+      "primary": "#a08060",
       "secondary": "#c4a882",
-      "bg":        "#fdf9f5",
-      "glow":      "rgba(160,128,96,0.2)",
-      "text":      "#1a1208"
+      "bg": "#fdf9f5",
+      "glow": "rgba(160,128,96,0.2)",
+      "text": "#1a1208"
     },
-    "sprite": "/rock/spirits/kesuiwang.png"
+    "sprite": "/spirits/kesuiwang.png"
   },
   {
     "id": "luoyin",
     "name": "罗隐",
     "element": "石系",
     "archetype": "内敛坚韧者",
-    "tags": ["外表凶悍", "善意内敛", "坚韧"],
+    "tags": [
+      "外表凶悍",
+      "善意内敛",
+      "坚韧"
+    ],
     "description": "你像罗隐一样，外表粗砺、话不多，但谁在困境里需要一块稳的基石，你总会在那里。你不善于表达温柔，但那份温柔比任何言语都更沉实。真正了解你的人，都知道你是最值得信任的那种人。",
     "shareText": "我的灵魂精灵是罗隐——外表凶悍、内心温柔。不轻易出手，但一出手必然稳妥。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#8b6914",
+      "primary": "#8b6914",
       "secondary": "#b8920a",
-      "bg":        "#fdfaf0",
-      "glow":      "rgba(139,105,20,0.2)",
-      "text":      "#140e00"
+      "bg": "#fdfaf0",
+      "glow": "rgba(139,105,20,0.2)",
+      "text": "#140e00"
     },
-    "sprite": "/rock/spirits/luoyin.png"
+    "sprite": "/spirits/luoyin.png"
   },
   {
     "id": "emolang",
     "name": "恶魔狼",
     "element": "恶魔系",
     "archetype": "嚣张爆发者",
-    "tags": ["酷感十足", "爆发力强", "我行我素"],
+    "tags": [
+      "酷感十足",
+      "爆发力强",
+      "我行我素"
+    ],
     "description": "你和恶魔狼一样，压根不需要别人认可。你有自己的节奏，有自己的骄傲，看不惯就说，不想忍就走。这种纯粹的自我虽然锋利，但也是你最真实的样子——比谁都清楚自己要什么。",
     "shareText": "我的灵魂精灵是恶魔狼——酷感爆发、我行我素。不需要掌声，只要战斗。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#8e44ad",
+      "primary": "#8e44ad",
       "secondary": "#b06abf",
-      "bg":        "#fbf5ff",
-      "glow":      "rgba(142,68,173,0.2)",
-      "text":      "#120818"
+      "bg": "#fbf5ff",
+      "glow": "rgba(142,68,173,0.2)",
+      "text": "#120818"
     },
-    "sprite": "/rock/spirits/emolang.png"
+    "sprite": "/spirits/emolang.png"
   },
   {
     "id": "yajiji",
     "name": "鸭吉吉国王",
     "element": "普通系",
     "archetype": "热心活络者",
-    "tags": ["话多热心", "机灵", "天生社交家"],
+    "tags": [
+      "话多热心",
+      "机灵",
+      "天生社交家"
+    ],
     "description": "你有鸭吉吉国王独有的热情——话匣子一开就关不上，但说的每句话都是认真的。你对新鲜事物有天然的好奇心，总能在意想不到的角度找到突破口。你是团队里最活跃的那根神经。",
     "shareText": "我的灵魂精灵是鸭吉吉国王——热心话多、机灵活络。走到哪，那里就不冷场。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#e8a020",
+      "primary": "#e8a020",
       "secondary": "#f0c060",
-      "bg":        "#fffcf0",
-      "glow":      "rgba(232,160,32,0.2)",
-      "text":      "#1a1000"
+      "bg": "#fffcf0",
+      "glow": "rgba(232,160,32,0.2)",
+      "text": "#1a1000"
     },
-    "sprite": "/rock/spirits/yajiji.png"
+    "sprite": "/spirits/yajiji.png"
   },
   {
     "id": "yinsugou",
     "name": "音速犬",
     "element": "火系",
     "archetype": "专注爆发者",
-    "tags": ["霸气", "高度专注", "先发制人"],
+    "tags": [
+      "霸气",
+      "高度专注",
+      "先发制人"
+    ],
     "description": "你有音速犬的专注——一旦锁定目标，就不会让任何干扰进来。你信奉「准备充分、一击制胜」，不做无用功，只做有效的事。这种专注让你在真正重要的时刻，总能比别人快半步。",
     "shareText": "我的灵魂精灵是音速犬——霸气专注、先发制人。一旦认定，绝不拖泥带水。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#c03020",
+      "primary": "#c03020",
       "secondary": "#e06040",
-      "bg":        "#fff6f4",
-      "glow":      "rgba(192,48,32,0.2)",
-      "text":      "#180604"
+      "bg": "#fff6f4",
+      "glow": "rgba(192,48,32,0.2)",
+      "text": "#180604"
     },
-    "sprite": "/rock/spirits/yinsugou.png"
+    "sprite": "/spirits/yinsugou.png"
   },
   {
     "id": "dujiaoshou",
     "name": "独角兽",
     "element": "翼系",
     "archetype": "敏感守护者",
-    "tags": ["敏感细腻", "傲气", "深度守护"],
+    "tags": [
+      "敏感细腻",
+      "傲气",
+      "深度守护"
+    ],
     "description": "你与独角兽共享同一种内心——表面傲气，其实是在保护一颗极度敏感的心。你注意到别人注意不到的细节，感受到别人感受不到的微妙。正因如此，你的守护比任何人都更细腻、更到位。",
     "shareText": "我的灵魂精灵是独角兽——傲气敏感、默默守护。你以为我冷，其实我只是太认真了。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#9b70d8",
+      "primary": "#9b70d8",
       "secondary": "#b898e8",
-      "bg":        "#faf6ff",
-      "glow":      "rgba(155,112,216,0.2)",
-      "text":      "#0e0818"
+      "bg": "#faf6ff",
+      "glow": "rgba(155,112,216,0.2)",
+      "text": "#0e0818"
     },
-    "sprite": "/rock/spirits/dujiaoshou.png"
+    "sprite": "/spirits/dujiaoshou.png"
   },
   {
     "id": "xingguangshi",
     "name": "星光狮",
     "element": "电系",
     "archetype": "威风支援者",
-    "tags": ["威风气场", "快速应变", "团队核心"],
+    "tags": [
+      "威风气场",
+      "快速应变",
+      "团队核心"
+    ],
     "description": "你有星光狮的气场——走进一个地方，格局就稳了。你不只会自己赢，更擅长帮团队赢。你能在混乱中第一个理清局势，用最快速的方式给大家撑起一道防线。你是别人最愿意身后有你的那种存在。",
     "shareText": "我的灵魂精灵是星光狮——威风气场、先手应变。不只赢自己，更帮大家赢。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#c8a800",
+      "primary": "#c8a800",
       "secondary": "#e0c840",
-      "bg":        "#fffef0",
-      "glow":      "rgba(200,168,0,0.2)",
-      "text":      "#181200"
+      "bg": "#fffef0",
+      "glow": "rgba(200,168,0,0.2)",
+      "text": "#181200"
     },
-    "sprite": "/rock/spirits/xingguangshi.png"
+    "sprite": "/spirits/xingguangshi.png"
   },
   {
     "id": "liaoyazhu",
     "name": "獠牙猪",
     "element": "冰·土系",
     "archetype": "勤勉踏实者",
-    "tags": ["勤勉朴实", "稳如磐石", "双防扎实"],
+    "tags": [
+      "勤勉朴实",
+      "稳如磐石",
+      "双防扎实"
+    ],
     "description": "你与獠牙猪一样脚踏实地。没有捷径，没有花哨，就是一步一个脚印把该做的事情做好。你的防守比进攻更有力量，你的坚持比才华更让人信服。时间是你最好的盟友。",
     "shareText": "我的灵魂精灵是獠牙猪——勤勉朴实、稳扎稳打。没有捷径，但每一步都算数。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#4a8a9e",
+      "primary": "#4a8a9e",
       "secondary": "#6aafc4",
-      "bg":        "#f5fbfd",
-      "glow":      "rgba(74,138,158,0.2)",
-      "text":      "#061218"
+      "bg": "#f5fbfd",
+      "glow": "rgba(74,138,158,0.2)",
+      "text": "#061218"
     },
-    "sprite": "/rock/spirits/liaoyazhu.png"
+    "sprite": "/spirits/liaoyazhu.png"
   },
   {
     "id": "yiwangbaobao",
     "name": "翼王宝宝",
     "element": "翼系",
     "archetype": "圣洁守护者",
-    "tags": ["守护本能", "圣洁", "速度与力量"],
+    "tags": [
+      "守护本能",
+      "圣洁",
+      "速度与力量"
+    ],
     "description": "你有翼王宝宝的纯粹——守护是你的本能，不需要理由，不需要回报。你在别人需要你的时候永远在场，哪怕消耗的是自己。这份圣洁不是软弱，而是你选择用最有力量的方式，保护你在乎的一切。",
     "shareText": "我的灵魂精灵是翼王宝宝——圣洁守护、速度与力量并存。为了守护，我可以飞得很快很高。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#b090e0",
+      "primary": "#b090e0",
       "secondary": "#ccb0f0",
-      "bg":        "#fdfaff",
-      "glow":      "rgba(176,144,224,0.2)",
-      "text":      "#0c0818"
+      "bg": "#fdfaff",
+      "glow": "rgba(176,144,224,0.2)",
+      "text": "#0c0818"
     },
-    "sprite": "/rock/spirits/yiwangbaobao.png"
+    "sprite": "/spirits/yiwangbaobao.png"
   },
   {
     "id": "keliji",
     "name": "可立鸡",
     "element": "火系",
     "archetype": "秩序执行者",
-    "tags": ["威严整齐", "规则至上", "纪律严明"],
+    "tags": [
+      "威严整齐",
+      "规则至上",
+      "纪律严明"
+    ],
     "description": "你和可立鸡一样，天生对混乱有种本能的不适。不是控制欲，而是你清楚秩序才能带来真正的效率。你订好规则、执行规则，别人觉得你严苛，但最终受益的总是团队里的每一个人。",
     "shareText": "我的灵魂精灵是可立鸡——威严整齐、秩序即力量。纪律不是枷锁，是通往胜利的路。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#d43a1a",
+      "primary": "#d43a1a",
       "secondary": "#e86040",
-      "bg":        "#fff5f2",
-      "glow":      "rgba(212,58,26,0.2)",
-      "text":      "#180602"
+      "bg": "#fff5f2",
+      "glow": "rgba(212,58,26,0.2)",
+      "text": "#180602"
     },
-    "sprite": "/rock/spirits/keliji.png"
+    "sprite": "/spirits/keliji.png"
   },
   {
     "id": "kakaniao",
     "name": "咔咔鸟",
     "element": "普通·翼系",
     "archetype": "开朗灵动者",
-    "tags": ["开朗快活", "灵动", "自带欢乐"],
+    "tags": [
+      "开朗快活",
+      "灵动",
+      "自带欢乐"
+    ],
     "description": "你有咔咔鸟的那种轻盈——不管去哪里，先把气氛带活再说。你的快乐不是强撑出来的，而是真的觉得世界有很多值得高兴的地方。你的灵动让你总能在僵局里找到意想不到的出口。",
     "shareText": "我的灵魂精灵是咔咔鸟——开朗快活、轻盈灵动。哪里有我，哪里就不沉闷。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#42a8e0",
+      "primary": "#42a8e0",
       "secondary": "#78c8f0",
-      "bg":        "#f4fbff",
-      "glow":      "rgba(66,168,224,0.2)",
-      "text":      "#041420"
+      "bg": "#f4fbff",
+      "glow": "rgba(66,168,224,0.2)",
+      "text": "#041420"
     },
-    "sprite": "/rock/spirits/kakaniao.png"
+    "sprite": "/spirits/kakaniao.png"
   },
   {
     "id": "paersasi",
     "name": "帕尔萨斯",
     "element": "恶魔系",
     "archetype": "忠诚执着者",
-    "tags": ["忠诚坚定", "执着不悔", "单纯"],
+    "tags": [
+      "忠诚坚定",
+      "执着不悔",
+      "单纯"
+    ],
     "description": "你和帕尔萨斯一样，认定了就不会回头。你的忠诚不是因为对方完美，而是因为你做了选择。这种执着有时让人不解，但恰恰是它，让你成为别人在风暴中最愿意抓住的那只手。",
     "shareText": "我的灵魂精灵是帕尔萨斯——忠诚执着、认定不回头。我的坚定，是我给你最好的礼物。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#9e2060",
+      "primary": "#9e2060",
       "secondary": "#c04080",
-      "bg":        "#fff5f9",
-      "glow":      "rgba(158,32,96,0.2)",
-      "text":      "#180610"
+      "bg": "#fff5f9",
+      "glow": "rgba(158,32,96,0.2)",
+      "text": "#180610"
     },
-    "sprite": "/rock/spirits/paersasi.png"
+    "sprite": "/spirits/paersasi.png"
   },
   {
     "id": "emoding",
     "name": "恶魔叮",
     "element": "恶魔·翼系",
     "archetype": "不离不弃者",
-    "tags": ["永不离弃", "执着守候", "深情"],
+    "tags": [
+      "永不离弃",
+      "执着守候",
+      "深情"
+    ],
     "description": "你有恶魔叮的那种守候——不是因为要求什么，而是因为离开从来不在你的选项里。你愿意在漫长的等待里一直在场，哪怕没人看见，哪怕没有回报。这份不离不弃，是你最深的温柔。",
     "shareText": "我的灵魂精灵是恶魔叮——执着守候、不离不弃。我不会走，这是我唯一想说的话。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#2a6e6a",
+      "primary": "#2a6e6a",
       "secondary": "#469090",
-      "bg":        "#f3fbfa",
-      "glow":      "rgba(42,110,106,0.2)",
-      "text":      "#041210"
+      "bg": "#f3fbfa",
+      "glow": "rgba(42,110,106,0.2)",
+      "text": "#041210"
     },
-    "sprite": "/rock/spirits/emoding.png"
+    "sprite": "/spirits/emoding.png"
   },
   {
     "id": "kula",
     "name": "酷拉",
     "element": "电系",
     "archetype": "神秘霸气者",
-    "tags": ["霸气神秘", "雷电之力", "难以揣摩"],
+    "tags": [
+      "霸气神秘",
+      "雷电之力",
+      "难以揣摩"
+    ],
     "description": "你与酷拉共享同一种气场——低调的时候让人摸不透，出手的时候让人无法忽视。你不解释自己，不迎合别人，但那股神秘的力量感让所有人都知道：你是不能被轻易招惹的那种存在。",
     "shareText": "我的灵魂精灵是酷拉——神秘霸气、雷电无声。你看不懂我，才是我最满意的状态。#洛克王国TI",
     "isHidden": false,
     "theme": {
-      "primary":   "#3060c8",
+      "primary": "#3060c8",
       "secondary": "#5080e8",
-      "bg":        "#f4f6ff",
-      "glow":      "rgba(48,96,200,0.2)",
-      "text":      "#040a1e"
+      "bg": "#f4f6ff",
+      "glow": "rgba(48,96,200,0.2)",
+      "text": "#040a1e"
     },
-    "sprite": "/rock/spirits/kula.png"
+    "sprite": "/spirits/kula.png"
   },
   {
     "id": "abu",
     "name": "阿布",
     "element": "普通→龙系",
     "archetype": "潜力觉醒者",
-    "tags": ["看似胆小", "危机爆发", "潜力无限"],
+    "tags": [
+      "看似胆小",
+      "危机爆发",
+      "潜力无限"
+    ],
     "description": "你和阿布一样，平时低调得几乎让人忽视，但关键时刻会让所有人大吃一惊。你的潜力不是摆出来给人看的，而是在真正需要的时候才会燃起来。那种从胆怯到爆发的反差，正是你最动人的地方。",
     "shareText": "我的灵魂精灵是阿布——看似胆小，实则潜力无限。等你们都以为我认输了，我才刚刚开始。#洛克王国TI",
     "isHidden": true,
     "hiddenCondition": "触发隐藏精灵判定",
     "theme": {
-      "primary":   "#a070b8",
+      "primary": "#a070b8",
       "secondary": "#c090d8",
-      "bg":        "#fdf8ff",
-      "glow":      "rgba(160,112,184,0.2)",
-      "text":      "#100818"
+      "bg": "#fdf8ff",
+      "glow": "rgba(160,112,184,0.2)",
+      "text": "#100818"
     },
-    "sprite": "/rock/spirits/abu.png"
+    "sprite": "/spirits/abu.png"
   },
   {
     "id": "enzo",
     "name": "恩佐",
     "element": "暗系",
     "archetype": "孤傲深情者",
-    "tags": ["孤傲冷峻", "外冷内热", "深情偏执"],
+    "tags": [
+      "孤傲冷峻",
+      "外冷内热",
+      "深情偏执"
+    ],
     "description": "你与恩佐共享那种难以名状的复杂——外表冷峻，内心却藏着比任何人都深的情感。你不轻易靠近，也不轻易放手。一旦在意，就是偏执的那种在意。这份深情是你的秘密，也是你最不设防的地方。",
     "shareText": "我的灵魂精灵是恩佐——孤傲外表，深情内核。认识我的人不多，但认识我的人，都懂得珍惜。#洛克王国TI",
     "isHidden": true,
     "hiddenCondition": "触发隐藏精灵判定",
     "theme": {
-      "primary":   "#2c3e6e",
+      "primary": "#2c3e6e",
       "secondary": "#445090",
-      "bg":        "#f4f5fa",
-      "glow":      "rgba(44,62,110,0.25)",
-      "text":      "#040610"
+      "bg": "#f4f5fa",
+      "glow": "rgba(44,62,110,0.25)",
+      "text": "#040610"
     },
-    "sprite": "/rock/spirits/enzo.png"
+    "sprite": "/spirits/enzo.png"
   }
 ]
