@@ -8,12 +8,26 @@ import type { QuizResult }          from '@/types/result'
 const router  = useRouter()
 const storage = useStorage()
 
-const result     = ref<QuizResult | null>(null)
-const visible    = ref(false)
-const cardRef    = ref<HTMLElement | null>(null)
+const result      = ref<QuizResult | null>(null)
+const visible     = ref(false)
+const cardRef     = ref<HTMLElement | null>(null)
 const downloading = ref(false)
 const fontWarmed  = ref(false)
 const previewUrl  = ref('')
+const spiritBase64 = ref('')
+
+async function loadBase64(src: string): Promise<string> {
+  try {
+    const res = await fetch(src)
+    const blob = await res.blob()
+    return await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onload  = () => resolve(reader.result as string)
+      reader.onerror = reject
+      reader.readAsDataURL(blob)
+    })
+  } catch { return '' }
+}
 
 onMounted(() => {
   const r = storage.loadResult()
@@ -22,6 +36,10 @@ onMounted(() => {
   setTimeout(async () => {
     visible.value = true
     await nextTick()
+    // 预加载精灵图为 base64，确保截图时图片已内联
+    if (result.value?.mainSpirit?.sprite) {
+      spiritBase64.value = await loadBase64(result.value.mainSpirit.sprite)
+    }
     if (cardRef.value) {
       toPng(cardRef.value, { pixelRatio: 1 }).then(() => { fontWarmed.value = true }).catch(() => {})
     }
@@ -54,7 +72,8 @@ async function downloadCard() {
   if (!cardRef.value || downloading.value) return
   downloading.value = true
   try {
-    const opts = { pixelRatio: isMobile ? 1.5 : 2 }
+    // box-shadow 在 canvas 渲染时会产生边缘细线，截图时关掉
+    const opts = { pixelRatio: isMobile ? 1.5 : 2, style: { boxShadow: 'none' } }
     // 第一次让库加载字体等资源，第二次拿到正确截图，各限 15s
     await withTimeout(toPng(cardRef.value, opts), 15000)
     const dataUrl = await withTimeout(toPng(cardRef.value, opts), 15000)
@@ -107,7 +126,7 @@ function restart() {
         <div class="spirit-visual">
           <img
             v-if="main?.sprite"
-            :src="main.sprite"
+            :src="spiritBase64 || main.sprite"
             :alt="main.name"
             class="spirit-img"
             @error="onImgError"
