@@ -485,13 +485,13 @@ function restart() {
 .preview-mask {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
 }
 
 .preview-box {
@@ -506,7 +506,7 @@ function restart() {
 .preview-hint {
   font-family: 'Noto Sans SC', sans-serif;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-2);
   letter-spacing: 0.06em;
   margin: 0;
   text-align: center;
@@ -525,14 +525,14 @@ function restart() {
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-3);
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border);
   border-radius: 20px;
   padding: 8px 28px;
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
 }
-.preview-close:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+.preview-close:hover { color: var(--text); border-color: var(--text-3); }
 
 </style>
