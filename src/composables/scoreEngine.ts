@@ -2,14 +2,23 @@ import type { QuizOption } from '@/types/question'
 import type { Spirit }     from '@/types/spirit'
 import type { QuizResult } from '@/types/result'
 import spiritsRaw           from '@/data/spirits.json'
+import questionsRaw         from '@/data/questions.json'
 
-const spirits = spiritsRaw as unknown as Spirit[]
+const spirits   = spiritsRaw as unknown as Spirit[]
+const questions = questionsRaw as unknown as { options: QuizOption[] }[]
 
 // 彩蛋触发阈值（分开设置，因为两类标签选项数量不同）
 // jijiiya 共 11 个选项，需选中 8 个（73%）才触发恩佐
 // dengdengya 共 14 个选项，需选中 10 个（71%）才触发阿布
 const JIJIIYA_THRESHOLD  = 8
 const DENGDENG_THRESHOLD = 10
+
+// 每个精灵拥有的 weight=3 题目总数（用于归一化，消除题数不等带来的概率偏差）
+const maxVotes: Record<string, number> = {}
+for (const q of questions)
+  for (const opt of q.options)
+    for (const [id, w] of Object.entries(opt.weights as Record<string, number>))
+      if (w === 3) maxVotes[id] = (maxVotes[id] ?? 0) + 1
 
 export function calcResult(selectedOptions: QuizOption[]): QuizResult {
   // ── Easter egg detection ─────────────────────────────────────────────────
@@ -40,11 +49,13 @@ export function calcResult(selectedOptions: QuizOption[]): QuizResult {
   }
 
   // ── Vote-based scoring ────────────────────────────────────────────────────
-  // 主精灵：主力票最多；平局时在并列第一名中随机选，保证出场概率均等
+  // 主精灵：归一化得分最高者（得票 ÷ 该精灵 weight=3 题总数）
+  // 归一化消除题数不等带来的概率偏差（水蓝蓝/火花/酷拉各有 4 道，其余 3 道）
+  // 平局时随机选，保证出场概率均等
   // 副精灵：次要票最多（排除主精灵后）
   const visibleSpirits = spirits.filter(s => !s.isHidden)
-  const topScore       = Math.max(...visibleSpirits.map(s => primaryVotes[s.id] ?? 0))
-  const tied           = visibleSpirits.filter(s => (primaryVotes[s.id] ?? 0) === topScore)
+  const topScore       = Math.max(...visibleSpirits.map(s => (primaryVotes[s.id] ?? 0) / (maxVotes[s.id] ?? 1)))
+  const tied           = visibleSpirits.filter(s => (primaryVotes[s.id] ?? 0) / (maxVotes[s.id] ?? 1) === topScore)
   const main           = tied[Math.floor(Math.random() * tied.length)]
   const sub            = pickTop(secondaryVotes, visibleSpirits, 1, [main.id])[0]
 

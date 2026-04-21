@@ -18,10 +18,10 @@ function startQuiz() {
 
 const base = import.meta.env.BASE_URL
 const spirits = [
-  { name: '提莫',    element: '光系', img: `${base}spirits/timo.png`,       color: '#f0b820', delay: '0.15s' },
-  { name: '水蓝蓝',  element: '水系', img: `${base}spirits/shuilanlan.png`, color: '#4a9eff', delay: '0.3s'  },
-  { name: '独角兽',  element: '翼系', img: `${base}spirits/dujiaoshou.png`, color: '#9b70d8', delay: '0.45s' },
-  { name: '帕尔萨斯', element: '恶魔系', img: `${base}spirits/paersasi.png`, color: '#9e2060', delay: '0s'  },
+  { name: '提莫',    element: '光系', img: `${base}spirits/timo.webp`,       color: '#f0b820', delay: '0.15s' },
+  { name: '水蓝蓝',  element: '水系', img: `${base}spirits/shuilanlan.webp`, color: '#4a9eff', delay: '0.3s'  },
+  { name: '独角兽',  element: '翼系', img: `${base}spirits/dujiaoshou.webp`, color: '#9b70d8', delay: '0.45s' },
+  { name: '帕尔萨斯', element: '恶魔系', img: `${base}spirits/paersasi.webp`, color: '#9e2060', delay: '0s'  },
 ]
 
 </script>
