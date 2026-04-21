@@ -5,8 +5,7 @@ import { useStorage }     from '@/composables/useStorage'
 
 const router  = useRouter()
 const storage = useStorage()
-const visible = ref(false)
-onMounted(() => setTimeout(() => { visible.value = true }, 100))
+const visible = ref(true)
 
 const hasProgress = !!storage.loadProgress()?.selectedOptions?.length
 const hasResult   = !!storage.loadResult()

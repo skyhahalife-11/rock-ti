@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { useRouter }      from 'vue-router'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const router  = useRouter()
-const visible = ref(false)
-onMounted(() => setTimeout(() => { visible.value = true }, 80))
+const visible = ref(true)
 
 const rules = [
   { num: '01', title: '15 道题', desc: '每题选一个最符合直觉的答案，别过度分析' },

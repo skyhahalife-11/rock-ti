@@ -9,7 +9,7 @@ const router  = useRouter()
 const storage = useStorage()
 
 const result      = ref<QuizResult | null>(null)
-const visible     = ref(false)
+const visible     = ref(true)
 const cardRef     = ref<HTMLElement | null>(null)
 const downloading = ref(false)
 const fontWarmed  = ref(false)
@@ -29,21 +29,18 @@ async function loadBase64(src: string): Promise<string> {
   } catch { return '' }
 }
 
-onMounted(() => {
+onMounted(async () => {
   const r = storage.loadResult()
   if (!r) { router.replace('/'); return }
   result.value = r
-  setTimeout(async () => {
-    visible.value = true
-    await nextTick()
-    // 预加载精灵图为 base64，确保截图时图片已内联
-    if (result.value?.mainSpirit?.sprite) {
-      spiritBase64.value = await loadBase64(result.value.mainSpirit.sprite)
-    }
-    if (cardRef.value) {
-      toPng(cardRef.value, { pixelRatio: 1 }).then(() => { fontWarmed.value = true }).catch(() => {})
-    }
-  }, 80)
+  await nextTick()
+  // 预加载精灵图为 base64，确保截图时图片已内联
+  if (result.value?.mainSpirit?.sprite) {
+    spiritBase64.value = await loadBase64(result.value.mainSpirit.sprite)
+  }
+  if (cardRef.value) {
+    toPng(cardRef.value, { pixelRatio: 1 }).then(() => { fontWarmed.value = true }).catch(() => {})
+  }
 })
 
 const main       = computed(() => result.value?.mainSpirit)
